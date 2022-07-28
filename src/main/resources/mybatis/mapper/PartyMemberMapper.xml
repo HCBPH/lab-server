@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ycj.lab.mapper.PartyMemberMapper">
+    <select id="countOnePartyMember" resultType="java.lang.Integer">
+        select IFNULL(count(uid),0) from PARTY_MEMBERS where pid=#{pId} and state=1
+    </select>
+
+    <select id="findOnePartyMember" resultType="java.lang.Integer">
+        select uid from PARTY_MEMBERS where pid=#{pId} and state=1
+    </select>
+
+    <select id="findOnePartyMemberDetail" resultType="com.ycj.lab.entity.PartyMembers">
+        select uid,type from PARTY_MEMBERS where pid=#{pId} and state=1
+    </select>
+    <select id="findPartyMemberDup" resultType="java.lang.Integer">
+        select id from PARTY_MEMBERS WHERE uid=#{uId} AND pid=#{pId} AND state = 0;
+    </select>
+
+    <insert id="joinToParty">
+        insert into PARTY_MEMBERS(uid,pid)
+        select #{uId},#{pId} FROM DUAL where
+        NOT EXISTS (SELECT * FROM PARTY_MEMBERS WHERE uid=#{uId} AND pid=#{pId} AND state=1)
+    </insert>
+
+    <insert id="joinToPartyCreator">
+        insert into PARTY_MEMBERS(uid,pid,type) values (#{uId},#{pId},1)
+    </insert>
+
+    <update id="leaveParty">
+        update PARTY_MEMBERS set state=0 where uid=#{uId} and pid=#{pId}
+    </update>
+
+    <update id="updateUserType">
+        update PARTY_MEMBERS set type=#{type} where uid=#{uId} and pid=#{pId} and state=1
+    </update>
+
+    <update id="insertPartyMemberDup">
+        update PARTY_MEMBERS set state=1 where uid=#{uId} and pid=#{pId}
+    </update>
+</mapper>

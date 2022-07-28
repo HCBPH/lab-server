@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="00966a9d-50a1-4a29-8878-15dbf6fa607c" name="Default Changelist" comment="USER模块获取信息出错更正">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ycj/lab/LabApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ycj/lab/LabApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ycj/lab/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ycj/lab/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ycj/lab/controller/StoreInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ycj/lab/controller/StoreInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ycj/lab/entity/StoreInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ycj/lab/entity/StoreInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ycj/lab/mapper/StoreInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ycj/lab/mapper/StoreInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ycj/lab/service/StoreInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ycj/lab/service/StoreInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ycj/lab/service/impl/StoreInfoServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ycj/lab/service/impl/StoreInfoServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/GroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/GroupMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/StoreInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/StoreInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ycj/lab/database/LabApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ycj/lab/database/LabApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/GroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/GroupMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/StoreInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/StoreInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/lab-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/lab-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ycj.lab.database.LabApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ycj.lab.database.LabApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ycj.lab.database.LabApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ycj.lab.database.LabApplicationTests.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Program Files/Apache/maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Program Files\Apache\maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1zr3ZVxJ5yugvq489cWk6j1DEZJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Knowledge/knowledge" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\java_web\lab\src\main\resources\mybatis\mapper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.LabApplication">
+    <configuration name="LabApplicationTests.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ycj.lab.database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ycj.lab.database" />
+      <option name="MAIN_CLASS_NAME" value="com.ycj.lab.database.LabApplicationTests" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LabApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="lab" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ycj.lab.LabApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LabApplicationTests.test1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00966a9d-50a1-4a29-8878-15dbf6fa607c" name="Default Changelist" comment="" />
+      <created>1634892437237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634892437237</updated>
+      <workItem from="1634892440719" duration="909000" />
+      <workItem from="1634902194485" duration="3180000" />
+      <workItem from="1634905441989" duration="2479000" />
+      <workItem from="1634976578441" duration="23000" />
+      <workItem from="1634976621424" duration="4326000" />
+      <workItem from="1634994770231" duration="5490000" />
+      <workItem from="1635059460639" duration="1964000" />
+      <workItem from="1635301905313" duration="3657000" />
+      <workItem from="1635310149787" duration="5361000" />
+      <workItem from="1635339520038" duration="4437000" />
+      <workItem from="1635379161680" duration="5752000" />
+      <workItem from="1635416280888" duration="923000" />
+      <workItem from="1635467035692" duration="6700000" />
+      <workItem from="1635474839943" duration="145000" />
+      <workItem from="1635483458643" duration="12233000" />
+      <workItem from="1636536977331" duration="2320000" />
+      <workItem from="1636555525260" duration="6530000" />
+      <workItem from="1636610494289" duration="2890000" />
+      <workItem from="1636621091209" duration="685000" />
+      <workItem from="1637032964993" duration="2475000" />
+      <workItem from="1637108439235" duration="5000" />
+      <workItem from="1637128169281" duration="2608000" />
+      <workItem from="1639120970786" duration="311000" />
+      <workItem from="1639121356227" duration="278000" />
+      <workItem from="1639205317707" duration="204000" />
+      <workItem from="1639205544106" duration="27000" />
+      <workItem from="1639403898550" duration="112000" />
+      <workItem from="1639458364676" duration="3666000" />
+      <workItem from="1639463057627" duration="652000" />
+      <workItem from="1644829908387" duration="1400000" />
+      <workItem from="1645231526457" duration="3109000" />
+      <workItem from="1645254397086" duration="4626000" />
+      <workItem from="1645341515723" duration="3541000" />
+      <workItem from="1645429692551" duration="4546000" />
+      <workItem from="1645509839861" duration="8128000" />
+      <workItem from="1645535737532" duration="851000" />
+      <workItem from="1646030102375" duration="199000" />
+      <workItem from="1646032942311" duration="159000" />
+      <workItem from="1646033337513" duration="210000" />
+      <workItem from="1646809614632" duration="28000" />
+      <workItem from="1646811340538" duration="6000" />
+      <workItem from="1646811891015" duration="313000" />
+      <workItem from="1646817814674" duration="609000" />
+      <workItem from="1646818836948" duration="125000" />
+      <workItem from="1647221228039" duration="3588000" />
+      <workItem from="1647488832742" duration="16000" />
+      <workItem from="1649242044311" duration="1024000" />
+      <workItem from="1649253328504" duration="180000" />
+      <workItem from="1649253653122" duration="377000" />
+      <workItem from="1649254431250" duration="394000" />
+      <workItem from="1649593312150" duration="3584000" />
+      <workItem from="1649637576365" duration="2291000" />
+      <workItem from="1649744077632" duration="6476000" />
+      <workItem from="1649982808574" duration="40000" />
+      <workItem from="1649983187784" duration="27000" />
+      <workItem from="1650021773048" duration="66000" />
+      <workItem from="1650022565300" duration="175000" />
+      <workItem from="1650118425827" duration="623000" />
+    </task>
+    <task id="LOCAL-00001" summary="不知道什么原因，之前上传的是之前版本的，所以重新上传一边">
+      <created>1636612261711</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636612261711</updated>
+    </task>
+    <task id="LOCAL-00002" summary="USER模块获取信息出错更正">
+      <created>1637034891155</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1637034891156</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="renew" />
+    <MESSAGE value="不知道什么原因，之前上传的是之前版本的，所以重新上传一边" />
+    <MESSAGE value="USER模块获取信息出错更正" />
+    <option name="LAST_COMMIT_MESSAGE" value="USER模块获取信息出错更正" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

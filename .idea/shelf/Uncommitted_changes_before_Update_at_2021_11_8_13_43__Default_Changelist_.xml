@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Update_at_2021_11_8_13_43_[Default_Changelist]" date="1636350190415" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_11_8_13_43_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2021/11/8 13:43 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
+    <option name="AFTER_PATH" value="target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_11_8_13_43_[Default_Changelist]/createdFiles.lst" />
+  </binary>
+</changelist>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ycj.lab.mapper.CommentInfoMapper">
+    <select id="queryCommentById" parameterType="java.lang.Long" resultType="com.ycj.lab.entity.CommentInfo">
+        select * from COMMENT_INFO where id = #{id} and state = 1;
+    </select>
+    <select id="queryCommentListByPageTime" resultType="com.ycj.lab.entity.CommentInfo">
+        select * from COMMENT_INFO where store_id = #{sid} and parent_id = 0 and state = 1 order by cast(create_time as datetime) limit #{page},#{size}
+    </select>
+    <select id="queryCommentListByPageAscend" resultType="com.ycj.lab.entity.CommentInfo">
+        select * from COMMENT_INFO where store_id = #{sid} and parent_id = 0 and state = 1 order by score limit #{page},#{size}
+    </select>
+    <select id="queryCommentListByScoreDescend" resultType="com.ycj.lab.entity.CommentInfo">
+        select * from COMMENT_INFO where store_id = #{sid} and parent_id = 0 and state = 1 order by score desc limit #{page},#{size}
+    </select>
+    <select id="queryExistenceById" parameterType="java.lang.Long" resultType="java.lang.String">
+        select picture from COMMENT_INFO where id = #{id} and state = 1;
+    </select>
+    <select id="querySubCommentListByTopId" parameterType="java.lang.Long" resultType="com.ycj.lab.entity.CommentInfo">
+        select * from COMMENT_INFO where top_id = #{topId} and parent_id != 0 and state = 1;
+    </select>
+
+    <insert id="insertComment" parameterType="com.ycj.lab.entity.CommentInfo"   useGeneratedKeys="true" keyProperty="id">
+        insert COMMENT_INFO(store_id,uid,parent_id,top_id,content,reply_uid,reply_nickname,score,cost,create_time)
+        values (#{storeId},#{uid},#{parentId},#{topId},#{content},#{replyUid},#{replyNickname},#{score},#{cost},#{createTime})
+    </insert>
+
+    <update id="updateCommentById" parameterType="com.ycj.lab.entity.CommentInfo">
+        update COMMENT_INFO
+        <set>
+            <if test="parentId != 0">
+                parentId = #{parent_id},
+            </if>
+            <if test="topId != 0">
+                top_id = #{topId},
+            </if>
+            <if test="content != null">
+                content = #{content},
+            </if>
+            <if test="replyUid != 0">
+                reply_uid = #{replyUid},
+            </if>
+            <if test="replyNickname != null">
+                reply_nickname = #{replyNickname},
+            </if>
+            <if test="score != 0">
+                score = #{score},
+            </if>
+            <if test="cost != 0">
+                cost = #{cost},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+        </set>
+        where id = #{id} and state = 1
+    </update>
+    <update id="updateStateById" parameterType="java.lang.Long">
+        update COMMENT_INFO set state = 0 where id = #{id} and state = 1
+    </update>
+    <update id="updatePictureByid">
+        update COMMENT_INFO set picture = #{picture} where id = #{id} and state = 1
+    </update>
+</mapper>

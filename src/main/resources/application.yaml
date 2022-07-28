@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: lab
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.97.252.179:3306/lab_test?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    username: lab
+    password: smyxDAeLxE4TwLPK
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
+  jackson:
+    date-format: java.text.SimpleDateFormat
+    time-zone: GMT+8
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com/ycj/lab/entity
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  file:
+    name: D:/cache/tmp/lab/lab.log
+

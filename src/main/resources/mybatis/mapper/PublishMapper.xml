@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ycj.lab.mapper.PublishMapper">
+    <insert id="addRecommend" parameterType="com.ycj.lab.entity.RecommendEntity">
+        INSERT INTO RECOMMEND_INFO(publisher,title,brief,content,tag) VALUES(#{publisher},#{title},#{brief},#{content},#{tag})
+    </insert>
+
+    <insert id="addTopic" parameterType="com.ycj.lab.entity.TopicEntity" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO TOPIC_INFO(publisher,title,brief,content,tag) VALUES(#{publisher},#{title},#{brief},#{content},#{tag})
+    </insert>
+
+</mapper>

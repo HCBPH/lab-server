@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ycj.lab.mapper.PartyInfoMapper">
+    <select id="findOneParty" resultType="com.ycj.lab.entity.PartyInfo">
+        select * from PARTY_INFO where pid=#{pId} and state=1
+    </select>
+
+    <select id="findPartyByGroupId" resultType="com.ycj.lab.entity.PartyInfo">
+        select * from PARTY_INFO where gid=#{gId} and state=1
+    </select>
+
+<!--    <insert id="createPartyByGroup">-->
+<!--        <selectKey resultType="INTEGER" order="AFTER" keyProperty="id">-->
+<!--            SELECT LAST_INSERT_ID()-->
+<!--        </selectKey>-->
+<!--        insert into PARTY_INFO(gid,creator_id,title,place,rid,location,create_time,stage)-->
+<!--        values (#{gId},#{creatorId},#{title},#{place},#{rId},#{location},#{date},#{type})-->
+<!--    </insert>-->
+    <insert id="createPartyByGroup" parameterType="com.ycj.lab.entity.PartyInfo" useGeneratedKeys = "true" keyProperty = "pId">
+        insert into PARTY_INFO(gid,creator_id,title,place,rid,location,create_time,stage)
+        values (#{partyInfo.gId},#{partyInfo.creatorId},#{partyInfo.title},#{partyInfo.place},#{partyInfo.rId},#{partyInfo.location},#{partyInfo.createTime},#{partyInfo.stage})
+    </insert>
+
+    <update id="bindPartyToGroup">
+        update PARTY_INFO set gid=#{gId} where pid=#{pId} and state=1
+    </update>
+
+    <update id="releaseParty">
+        update PARTY_INFO set state=0 where pid=#{pId} and creator_id=#{creatorId}
+    </update>
+
+    <update id="changePartyStage">
+        update PARTY_INFO set stage=#{stage} where pid=#{pId} and creator_id=#{creatorId}
+    </update>
+
+    <update id="editParty">
+        update PARTY_INFO set ${column}=#{value} where pid=#{pId} and state=1
+    </update>
+</mapper>

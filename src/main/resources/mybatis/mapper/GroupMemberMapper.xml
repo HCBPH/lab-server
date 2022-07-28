@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ycj.lab.mapper.GroupMemberMapper">
+    <select id="findGroupMember" resultType="java.lang.Integer">
+        select uid from IM_GROUP_MEMBERS where gid=#{gId} and state=1
+    </select>
+
+    <select id="findGroupId" resultType="java.lang.Long">
+        select gid from IM_GROUP_MEMBERS where uid=#{uId} and state=1
+    </select>
+
+    <select id="findGroupMemberDup" resultType="java.lang.Integer">
+        select id from IM_GROUP_MEMBERS where uid=#{uId} and gid=#{gId} and state=0
+    </select>
+
+    <insert id="insertMember">
+        insert into IM_GROUP_MEMBERS(gid,uid)
+        select #{gId},#{uId} FROM DUAL where
+        NOT EXISTS (SELECT * FROM IM_GROUP_MEMBERS WHERE uid=#{uId} AND gid=#{gId} AND state=1)
+    </insert>
+    <update id="insertMemberDup">
+        update IM_GROUP_MEMBERS set state = 1 where gid = #{gId} and uid = #{uId};
+    </update>
+    <update id="deleteMember">
+        update IM_GROUP_MEMBERS set state = 0 where gid = #{gId} and uid = #{uId};
+    </update>
+
+</mapper>
